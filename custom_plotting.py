@@ -45,14 +45,13 @@ def create_strip_or_swarm_boxplot(
     y_axis_limit=None,
     y_axis_start=0,
     UpperAxisLimit=None,
+    ColsColor_Dict=None,
 ):
     fig, ax = plt.subplots()
 
     fig.set_size_inches(x_figSize * ScaleSize, y_figSize * ScaleSize)
 
     # ax = plt.gcf()
-
-    ColsColor_Dict = define_pallete(DF)
 
     if DF.shape[0] < 30:
         ax = sns.swarmplot(
