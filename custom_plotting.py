@@ -211,6 +211,7 @@ def tidy_create_strip_box_plot(
     y_label="set y label",
     save_fig=False,
     ExpName="Test_plot",
+    notch=True,
     **kwargs,
 ):
     """Creates sns plots. Pass **kwargs to sns.stripplot and sns.boxplot."""
@@ -222,7 +223,7 @@ def tidy_create_strip_box_plot(
         alpha=0.2, zorder=0, jitter=0.3, edgecolor="gray", linewidth=0.5, **kwargs
     )
     ax = sns.boxplot(
-        fliersize=0, zorder=1, saturation=0.9, linewidth=1.5, notch=True, **kwargs
+        fliersize=0, zorder=1, saturation=0.9, linewidth=1.5, notch=notch, **kwargs
     )
 
     if y_axis_limit != None:
